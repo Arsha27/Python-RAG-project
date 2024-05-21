@@ -2,6 +2,9 @@ from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
 
+
+
+
 DATA_PATH = "data/"
 
 
@@ -30,6 +33,7 @@ def split_text(documents: list[Document]):
 def generate_data_store():
     documents = load_docs()
     chunks = split_text(documents)
+ 
 
 
 def main():
