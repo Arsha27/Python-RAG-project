@@ -1,11 +1,15 @@
 from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
-
+from langchain_community.embeddings.ollama import OllamaEmbeddings
 
 
 
 DATA_PATH = "data/"
+
+def get_embeddings():
+    embeddings = OllamaEmbeddings( model= "nomic-embed-text" )
+    return embeddings
 
 
 def load_docs():
